@@ -2,7 +2,7 @@
     <br>
     {{- range site.Params.homeInfoParams.Badges }}
     <a href="{{ trim .url " " | safeURL }}">
-        <svg xmlns="http://www.w3.org/2000/svg" width="165" height="28" viewBox="0 0 165 28" >
+        <svg xmlns="http://www.w3.org/2000/svg" width="{{ .width }}" height="28" viewBox="0 0 {{ .width }} 28" >
             <image
               xlink:href="{{ trim .image " " | safeURL }}"
               src="{{ trim .image " " | safeURL }}"
